@@ -7,7 +7,7 @@ namespace Assignment3
     {
         List<int> deck = new List<int>();
         int[] hand = new int[5];
-        string initDirectory="";
+        const string INIT_DIR= @"C:\Users\cleva\source\repos\Assignment3\Assignment3\Saved Hands";
         public MainForm()
         {
             InitializeComponent();
@@ -92,9 +92,8 @@ namespace Assignment3
         private void MainForm_Load(object sender, EventArgs e)
         {
             DealHand();
-            initDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            safiSaveHand.InitialDirectory = initDirectory;
-            opfiLoadHand.InitialDirectory = initDirectory;
+            safiSaveHand.InitialDirectory = INIT_DIR;
+            opfiLoadHand.InitialDirectory = INIT_DIR;
         }
         private void btnDeal_Click(object sender, EventArgs e)
         {
